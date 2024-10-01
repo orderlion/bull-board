@@ -39,13 +39,15 @@
     "ACTIONS": {
       "PROMOTE": "Promouvoir",
       "CLEAN": "Supprimer",
+      "MOVE_TO_FAILED": "Déplacer vers les échouées",
       "RETRY": "Réessayer",
       "UPDATE_DATA": "Mettre à jour les données",
       "DUPLICATE": "Dupliquer",
       "CONFIRM": {
         "PROMOTE": "Êtes-vous sûr de vouloir promouvoir ce poste ?",
         "RETRY": "Êtes-vous sûr de vouloir réessayer ce poste ?",
-        "CLEAN": "Êtes-vous sûr de vouloir nettoyer ce poste ?"
+        "CLEAN": "Êtes-vous sûr de vouloir nettoyer ce poste ?",
+        "MOVE_TO_FAILED": "Êtes-vous sûr de vouloir déplacer ce poste vers les échouées ?"
       }
     },
     "TABS": {

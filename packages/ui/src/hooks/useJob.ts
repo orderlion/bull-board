@@ -74,6 +74,13 @@ export function useJob(): Omit<JobState, 'updateJob'> & { actions: JobActions } 
       confirmJobActions
     );
 
+  const moveJobToFailed = (queueName: string) => (job: AppJob) =>
+    withConfirmAndUpdate(
+      () => api.moveJobToFailed(queueName, job.id),
+      t('JOB.ACTIONS.CONFIRM.MOVE_TO_FAILED'),
+      confirmJobActions
+    );
+
   const updateJobData = (queueName: string, job: AppJob, newData: Record<string, any>) =>
     withConfirmAndUpdate(() => api.updateJobData(queueName, job.id, newData), '', false);
 
@@ -89,6 +96,7 @@ export function useJob(): Omit<JobState, 'updateJob'> & { actions: JobActions } 
       pollJob,
       promoteJob,
       cleanJob,
+      moveJobToFailed,
       getJobLogs,
       retryJob,
       updateJobData,

@@ -36,13 +36,15 @@
     "ACTIONS": {
       "PROMOTE": "提升",
       "CLEAN": "清理",
+      "MOVE_TO_FAILED": "移动到失败",
       "RETRY": "重试",
       "UPDATE_DATA": "更新数据",
       "DUPLICATE": "复制",
       "CONFIRM": {
         "PROMOTE": "您确定要推广这项工作吗？",
         "RETRY": "您确定要重试这项工作吗？",
-        "CLEAN": "您确定要清理这项工作吗？"
+        "CLEAN": "您确定要清理这项工作吗？",
+        "MOVE_TO_FAILED": "您确定要将此作业移动到失败吗？"
       }
     },
     "TABS": {

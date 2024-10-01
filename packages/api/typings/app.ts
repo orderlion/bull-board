@@ -44,6 +44,14 @@ export interface QueueJob {
 
   remove(): Promise<void>;
 
+  discard(): Promise<void> | void;
+
+  moveToFailed(
+    errorInfo: { message: string } | Error,
+    ignoreLockOrToken?: boolean | string,
+    fetchNext?: boolean
+  ): Promise<[any, number | string] | null | void>;
+  
   retry(state?: JobRetryStatus): Promise<void>;
 
   toJSON(): QueueJobJson;

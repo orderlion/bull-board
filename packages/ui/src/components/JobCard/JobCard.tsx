@@ -27,6 +27,7 @@ interface JobCardProps {
     promoteJob: () => Promise<void>;
     retryJob: () => Promise<void>;
     cleanJob: () => Promise<void>;
+    moveJobToFailed: () => Promise<void>;
     getJobLogs: () => Promise<string[]>;
   };
 }

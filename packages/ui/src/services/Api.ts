@@ -53,6 +53,12 @@ export class Api {
     );
   }
 
+  public moveJobToFailed(queueName: string, jobId: AppJob['id']): Promise<void> {
+    return this.axios.put(
+      `/queues/${encodeURIComponent(queueName)}/${encodeURIComponent(`${jobId}`)}/move-to-failed`
+    );
+  }
+
   public retryJob(queueName: string, jobId: AppJob['id'], status: JobRetryStatus): Promise<void> {
     return this.axios.put(
       `/queues/${encodeURIComponent(queueName)}/${encodeURIComponent(

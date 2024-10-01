@@ -37,13 +37,15 @@
     "ACTIONS": {
       "PROMOTE": "Promote",
       "CLEAN": "Clean",
+      "MOVE_TO_FAILED": "Move to failed",
       "RETRY": "Retry",
       "UPDATE_DATA": "Update Data",
       "DUPLICATE": "Duplicate",
       "CONFIRM": {
         "PROMOTE": "Are you sure that you want to promote this job?",
         "RETRY": "Are you sure that you want to retry this job?",
-        "CLEAN": "Are you sure that you want to clean this job?"
+        "CLEAN": "Are you sure that you want to clean this job?",
+        "MOVE_TO_FAILED": "Are you sure that you want to move this job to failed?"
       }
     },
     "TABS": {

@@ -72,6 +72,7 @@ export const JobPage = () => {
         status={status}
         actions={{
           cleanJob,
+          moveJobToFailed: actions.moveJobToFailed(queue.name)(job),
           promoteJob: actions.promoteJob(queue.name)(job),
           retryJob: actions.retryJob(queue.name, status as JobRetryStatus)(job),
           getJobLogs: actions.getJobLogs(queue.name)(job),

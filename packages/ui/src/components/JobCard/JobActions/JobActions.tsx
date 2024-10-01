@@ -18,6 +18,7 @@ interface JobActionsProps {
     promoteJob: () => Promise<void>;
     retryJob: () => Promise<void>;
     cleanJob: () => Promise<void>;
+    moveJobToFailed: () => Promise<void>;
     updateJobData: () => void;
     duplicateJob: () => void;
   };
@@ -26,7 +27,7 @@ interface JobActionsProps {
 interface ButtonType {
   titleKey: string;
   Icon: React.ElementType;
-  actionKey: 'promoteJob' | 'cleanJob' | 'retryJob' | 'updateJobData' | 'duplicateJob';
+  actionKey: 'promoteJob' | 'cleanJob' | 'retryJob' | 'updateJobData' | 'duplicateJob' | 'moveJobToFailed';
 }
 
 const buttonTypes: Record<string, ButtonType> = {
@@ -35,6 +36,7 @@ const buttonTypes: Record<string, ButtonType> = {
   clean: { titleKey: 'CLEAN', Icon: TrashIcon, actionKey: 'cleanJob' },
   retry: { titleKey: 'RETRY', Icon: RetryIcon, actionKey: 'retryJob' },
   duplicate: { titleKey: 'DUPLICATE', Icon: DuplicateIcon, actionKey: 'duplicateJob' },
+  moveToFailed: { titleKey: 'MOVE_TO_FAILED', Icon: TrashIcon, actionKey: 'moveJobToFailed' },
 } as const;
 
 const statusToButtonsMap: Record<string, ButtonType[]> = {
@@ -52,6 +54,7 @@ const statusToButtonsMap: Record<string, ButtonType[]> = {
   ],
   [STATUSES.completed]: [buttonTypes.duplicate, buttonTypes.retry, buttonTypes.clean],
   [STATUSES.waiting]: [buttonTypes.duplicate, buttonTypes.updateData, buttonTypes.clean],
+  [STATUSES.active]: [buttonTypes.moveToFailed],
 } as const;
 
 export const JobActions = ({ actions, status, allowRetries }: JobActionsProps) => {

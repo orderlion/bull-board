@@ -39,13 +39,15 @@
     "ACTIONS": {
       "PROMOTE": "Promover",
       "CLEAN": "Limpar",
+      "MOVE_TO_FAILED": "Mover para falhas",
       "RETRY": "Tente Novamente",
       "UPDATE_DATA": "Atualizar dados",
       "DUPLICATE": "Duplicar",
       "CONFIRM": {
         "PROMOTE": "Você tem certeza de que deseja promover este trabalho?",
         "RETRY": "Você tem certeza de que deseja tentar novamente este trabalho?",
-        "CLEAN": "Você tem certeza de que deseja limpar este trabalho?"
+        "CLEAN": "Você tem certeza de que deseja limpar este trabalho?",
+        "MOVE_TO_FAILED": "Você tem certeza de que deseja mover este trabalho para falhas?"
       }
     },
     "TABS": {

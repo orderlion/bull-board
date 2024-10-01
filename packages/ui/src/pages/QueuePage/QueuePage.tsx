@@ -86,6 +86,7 @@ export const QueuePage = () => {
           status={isLatest && job.isFailed ? STATUSES.failed : status}
           actions={{
             cleanJob: jobActions.cleanJob(queue.name)(job),
+            moveJobToFailed: jobActions.moveJobToFailed(queue.name)(job),
             promoteJob: jobActions.promoteJob(queue.name)(job),
             retryJob: jobActions.retryJob(queue.name, status as JobRetryStatus)(job),
             getJobLogs: jobActions.getJobLogs(queue.name)(job),
